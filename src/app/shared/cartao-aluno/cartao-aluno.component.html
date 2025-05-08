@@ -1,0 +1,32 @@
+<div class="cartao">
+    <div class="cartao-cabecalho">
+        <span>{{aluno.nome}}</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="carregaImagem.click()">
+                <mat-icon>add_photo_alternate</mat-icon>
+                <span>Carregar foto</span>
+                <input #carregaImagem type="file" (change)="salvarImagem($event)" accept="image/*" hidden>
+            </button>
+            <button mat-menu-item >
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+            </button>
+            <button mat-menu-item (click)="deletarAluno()">
+                <mat-icon>delete_outline</mat-icon>
+                <span>Deletar</span>
+            </button>
+        </mat-menu>
+    </div>
+  
+    <img class="cartao-imagem" [src]="aluno.fotoUrl" alt="Logo do aluno">
+  
+    <div class="cartao-detalhes">
+      <h2>{{aluno.nome}}</h2>
+      <h3>{{aluno.curso.titulo}}</h3>
+  
+  
+    </div>
+  </div>

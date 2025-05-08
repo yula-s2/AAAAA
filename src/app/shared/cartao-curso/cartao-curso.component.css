@@ -1,0 +1,27 @@
+.cartao{
+    width:100%;
+    height:100%;
+    background-color:#004853;
+    border-radius: 10px;
+    -webkit-box-shadow: 22px 10px 5px 0px rgb(230, 232, 197);
+-moz-box-shadow: 22px 10px 5px 0px rgb(211, 214, 194);
+box-shadow: 22px 10px 5px 0px rgb(66, 69, 61);
+
+    .cartao-cabecalho{
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+    .cartao-imagem {
+        width: 100%;
+        height: 10rem;
+    }
+
+    .cartao-detalhes{
+        text-align:center;
+        padding: 0.5rem;
+    }
+}

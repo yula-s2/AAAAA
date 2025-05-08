@@ -1,0 +1,13 @@
+<app-container>
+    <h1>Alunos</h1>
+    <button class="botao-add" mat-fab (click)="abrirModalCriarAluno()">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <section class="cartoes">
+        @for (aluno of alunos; track aluno.id) {
+        <app-cartao-aluno [aluno]="aluno" (alunoAtualizado)="buscarAlunos()"></app-cartao-aluno>
+
+        }
+    </section>
+</app-container>

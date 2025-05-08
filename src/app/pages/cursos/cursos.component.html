@@ -1,0 +1,14 @@
+<app-container>
+<p>cursos !</p>
+<button class="botao-add"
+mat-fab
+ (click)="abrirModalCriarCurso()">
+    <mat-icon>add</mat-icon>
+</button>
+
+ <section class="cartoes">
+    @for(curso of cursos; track curso.id) {
+    <app-cartao-curso [curso]="curso" (cursoAtualizado)="buscarCursos()"></app-cartao-curso>
+      }
+ </section>
+</app-container>

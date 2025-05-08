@@ -1,0 +1,134 @@
+.ModalForm {
+    color: var(--text-color);
+    background-color: var(--background2-color);
+
+}
+
+
+
+
+h2 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+
+    .form-field-telefoneMatricula {
+        display: flex;
+        gap: 10px;
+
+        .field:nth-child(1) {
+            flex: 1;
+        }
+
+        .field:nth-child(2) {
+            flex: 0.5;
+        }
+
+    }
+
+    .form-field-paisEstadoCep{
+        display: flex;
+        gap: 10px;
+
+        .field:nth-child(1) {
+            flex: 0.8;
+        }
+
+        .field:nth-child(2) {
+            flex: 1;
+        }
+
+        .field:nth-child(3) {
+            flex: 0.7;
+        }
+    }
+
+    .form-field-cidadeBairro{
+        display: flex;
+        gap: 10px;
+
+        .field:nth-child(1) {
+            flex: 0.5;
+        }
+
+        .field:nth-child(2) {
+            flex: 0.5;
+        }
+
+
+    }
+
+    .form-field-ruaNumero{
+        display: flex;
+        gap: 10px;
+
+        .field:nth-child(1) {
+            flex: 1;
+        }
+
+        .field:nth-child(2) {
+            flex: 0.5;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .save_button {
+        color: var(--text-color);
+        margin-top: 0.3rem;
+        background-color: var(--secondary-color);
+        flex: 1;
+    }
+
+    .cancel_button {
+        margin-top: 0.3rem;
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        flex: 1;
+    }
+
+    .campos {
+        display: flex;
+        gap: 13px;
+        flex: 1;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mat-mdc-unelevated-button:not(:disabled) {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+.mat-mdc-outlined-button:not(:disabled) {
+    color: var(--text-color);
+    
+}

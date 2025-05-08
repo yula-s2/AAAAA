@@ -1,0 +1,15 @@
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.botao-salvar{
+
+    margin-top: 1rem;
+
+}
+
+.botao-cancelar{
+
+    margin-top: 1rem;
+}

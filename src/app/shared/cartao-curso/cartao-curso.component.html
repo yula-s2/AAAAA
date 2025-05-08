@@ -1,0 +1,33 @@
+<div class="cartao">
+    <div class="cartao-cabecalho">
+        <span>{{curso.modalidade}}</span>
+        
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="carregaImagem.click()">
+                <mat-icon>photo</mat-icon>
+                <span>Carregar imagem</span>
+                <input #carregaImagem type="file" 
+                (change)="salvarImagem($event)"
+                accept="image/*"
+                hidden
+                >
+            </button>
+            <button mat-menu-item disabled>
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+            </button>
+            <button mat-menu-item (click)="deletarCurso()">
+                <mat-icon>delete</mat-icon>
+                <span>Deletar</span>
+            </button>
+        </mat-menu>
+    </div> <!-- Corrigido: Aqui é o fechamento da div 'cartao-cabecalho' -->
+    <img class="cartao-imagem" [src]="curso.imagemUrl" alt="">
+    <div class="cartao-detalhes">
+        <h2>{{curso.titulo}}</h2>
+        <h3>{{curso.areaTecnologica}}</h3>
+    </div>
+</div>

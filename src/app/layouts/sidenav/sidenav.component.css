@@ -1,0 +1,41 @@
+.toolbar{
+    background-color: var( --primary);
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    height: 2.5rem;
+  .spacer {
+    flex: 1 1 auto;
+   }
+}
+
+      .container {
+        max-height: calc(100vh - 2.5rem) ;
+        top: 2.5rem;
+        height: calc(100vh - 2.5rem);
+
+
+      .sidenav{
+        background-color: #cee7f2;
+        border-radius: 0;
+        width: auto;
+        padding: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: white;
+
+          &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+    }
+    .sidenav-content{
+        background-color: var(--primary);
+        height: 100%;
+    }
+} 
+

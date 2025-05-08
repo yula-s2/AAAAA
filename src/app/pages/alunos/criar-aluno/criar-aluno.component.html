@@ -1,0 +1,109 @@
+<app-modal-form class="ModalForm">
+  <h2>Criar aluno</h2>
+
+  <form class="form" [formGroup]="form">
+
+
+
+
+
+      <mat-form-field class="field">
+          <mat-label>Nome</mat-label>
+          <input class="inputField" matInput formControlName="nome">
+      </mat-form-field>
+
+
+      <mat-form-field class="field">
+          <mat-label>Email</mat-label>
+          <input class="inputField" matInput formControlName="email">
+      </mat-form-field>
+
+
+      <div class="form-field-telefoneMatricula">
+          <mat-form-field class="field">
+              <mat-label>Telefone</mat-label>
+              <input class="inputField" matInput formControlName="telefone">
+          </mat-form-field>
+
+
+          <mat-form-field class="field">
+              <mat-label>Matricula</mat-label>
+              <input class="inputField" matInput formControlName="matricula">
+          </mat-form-field>
+
+
+
+
+      </div>
+
+      <div class="form-field-paisEstadoCep">
+
+          <mat-form-field class="field">
+              <mat-label>País</mat-label>
+              <input class="inputField" matInput formControlName="pais">
+          </mat-form-field>
+
+          <mat-form-field class="field">
+              <mat-label>Estado</mat-label>
+              <input class="inputField" matInput formControlName="estado">
+          </mat-form-field>
+
+
+          <mat-form-field class="field">
+              <mat-label>CEP</mat-label>
+              <input class="inputField" matInput formControlName="cep">
+          </mat-form-field>
+
+      </div>
+
+      <div class="form-field-cidadeBairro">
+          <mat-form-field class="field">
+              <mat-label>Cidade</mat-label>
+              <input class="inputField" matInput formControlName="cidade">
+          </mat-form-field>
+
+
+          <mat-form-field class="field">
+              <mat-label>Bairro</mat-label>
+              <input class="inputField" matInput formControlName="bairro">
+          </mat-form-field>
+
+      </div>
+
+
+      <div class="form-field-ruaNumero">
+          <mat-form-field class="field">
+              <mat-label>Rua</mat-label>
+              <input class="inputField" matInput formControlName="rua">
+          </mat-form-field>
+
+
+          <mat-form-field class="field">
+              <mat-label>Número</mat-label>
+              <input class="inputField" matInput formControlName="numero">
+          </mat-form-field>
+
+      </div>
+
+      <mat-form-field class="field">
+          <mat-label>Curso</mat-label>
+
+          <mat-label></mat-label>
+          <mat-select matInput formControlName="cursoId">
+              @for (curso of curso; track curso.id){
+              <mat-option [value]="curso.id">{{ curso.titulo}}</mat-option>
+              }
+          </mat-select>
+      </mat-form-field>
+
+
+
+
+      <div class="buttons">
+          <button class="save_button" mat-flat-button (click)="salvarAluno()">Salvar</button>
+          <button class="cancel_button" mat-stroked-button (click)="dialog.close()">Cancelar</button>
+
+      </div>
+
+  </form>
+</app-modal-form>

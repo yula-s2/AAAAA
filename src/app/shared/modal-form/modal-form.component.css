@@ -1,0 +1,6 @@
+:host {
+    width: 30rem;
+    height: auto;
+    background-color: var(secondary-color);
+    padding: 1rem;
+}

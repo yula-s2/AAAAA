@@ -1,0 +1,28 @@
+<app-modal-form>
+  <h1>Criar curso</h1>
+  <form class="form" [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Área tecnológica</mat-label>
+      <input matInput placeholder="Ex. Tec. informação" formControlName="areaTecnologica">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Título</mat-label>
+      <input formControlName="titulo" matInput placeholder="Desenvolvimento de sistemas">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Modalidade</mat-label>
+      <mat-select formControlName="modalidade">
+        <mat-option value="Presencial">Presencial</mat-option>
+        <mat-option value="Semi-presencial">Semi-presencial</mat-option>
+        <mat-option value="EAD">EAD</mat-option>
+
+
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-flat-button class="botao-salvar" (click)="salvarCurso()">Salvar</button>
+    <button mat-stroked-button class="botao-cancelar" (click)="dialog.close()">Cancelar</button>
+  </form>
+</app-modal-form>
